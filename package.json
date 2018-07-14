@@ -1,0 +1,31 @@
+{
+  "name": "fsite-simple-landing",
+  "version": "1.0.0",
+  "description": "simple landing",
+  "main": "main.js",
+  "dependencies": {
+    "gulp": "^4.0.0",
+    "gulp-less": "^4.0.1",
+    "gulp-sass": "^4.0.1",
+    "hoek": "^5.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m-kon/start-template.git"
+  },
+  "keywords": [
+    "html",
+    "sass",
+    "gulp"
+  ],
+  "author": "mkon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/m-kon/start-template/issues"
+  },
+  "homepage": "https://github.com/m-kon/start-template#readme"
+}
