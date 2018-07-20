@@ -11,6 +11,11 @@
       integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
       crossorigin="anonymous">
 
+    <!-- Fonts -->
+    <link rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+      integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+      crossorigin="anonymous">
     <!-- Custom styles -->
     <link rel="stylesheet" href="css/styles.css">
 
@@ -21,8 +26,7 @@
       <!-- Части страницы:
             карточка(фото(картинка), имя, профессия, выпадающий абаут(?) ),
             список ссылок(заголовок, ссылки(название, ссылка на страницу, сслка на код)). -->
-      <div class="person-card">
-        <!-- <img src="img/vk_small.png" alt="Мое фото by Andrusha Korzhuev"> -->
+      <div class="section person-card">
         <div class="img"></div>
         
         <div class="caption">
@@ -31,15 +35,38 @@
         </div>
       </div>
 
-      <div class="section">
-        <h1>Приложения:</h1>
+      <div class="section links-list">
+        <h2>Приложения:</h2>
 
         <ul>
           <li>
-            FSiTE simple landing
-            <a href="https://mkon.pythonanywhere.com/fsite-simple-landing">Посмотреть</a>
-            <a href="https://github.com/m-kon/fsite-simple-landing">Гитхаб</a>
+            <span class="app-title">
+              FSiTE simple landing
+            </span>
+            <span class="app-links">
+              <a href="https://mkon.pythonanywhere.com/fsite-simple-landing">
+                 <i class="fas fa-eye"></i>
+              </a>
+              <a href="https://github.com/m-kon/fsite-simple-landing">
+                 <i class="fab fa-github"></i>
+              </a>
+            </span>
           </li>
+          <li>
+              <span class="app-title">
+                FSiTE simple landing
+              </span>
+              <span class="app-links">
+                <a href="https://mkon.pythonanywhere.com/fsite-simple-landing"
+                   class="link-vk">
+                   <i class="fas fa-eye"></i>
+                </a>
+                <a href="https://github.com/m-kon/fsite-simple-landing"
+                   class="link-github">
+                   <i class="fab fa-github"></i>
+                </a>
+              </span>
+            </li>
         </ul>
       </div>
 
