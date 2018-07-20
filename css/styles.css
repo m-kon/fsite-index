@@ -1,3 +1,9 @@
+h1, h2, h3, h4, h5, h6, a:hover {
+  color: black; }
+
+a, .links-list li {
+  color: rgba(0, 0, 0, 0.7); }
+
 html, body, .container {
   height: 100%; }
 
@@ -5,10 +11,8 @@ body {
   font-family: var(--font-family-monospace); }
 
 a {
-  color: rgba(0, 0, 0, 0.7);
   transition: .2s; }
   a:hover {
-    color: black;
     font-size: 1.025rem;
     text-decoration: none !important; }
 
@@ -30,7 +34,7 @@ a {
   cursor: pointer; }
   .person-card > .img {
     background-image: url("../img/vk_small.png");
-    border: 2px solid var(--red);
+    border: 2px solid #dc3545;
     border-radius: 50%;
     height: 100px;
     width: 100px;
@@ -54,15 +58,14 @@ a {
     padding-left: 0;
     margin-bottom: .5rem; }
     .links-list > ul li {
-      color: rgba(0, 0, 0, 0.7);
       line-height: 2;
       padding-left: 1rem;
       padding-right: 1rem;
       transition: .2s; }
       .links-list > ul li:hover {
         background-color: rgba(0, 0, 0, 0.05);
-        border-left: 2px solid var(--orange);
-        border-right: 2px solid var(--orange); }
+        border-left: 2px solid #fd7e14;
+        border-right: 2px solid #fd7e14; }
       .links-list > ul li .app-title {
         float: left; }
       .links-list > ul li .app-links {
