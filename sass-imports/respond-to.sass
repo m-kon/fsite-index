@@ -1,0 +1,21 @@
+// Extra small screen / phone
+$screen-xs: 576px;
+
+// Small screen / tablet
+$screen-sm: 768px;
+
+// Medium screen / desktop
+$screen-md: 992px;
+
+// Large screen / wide desktop
+$screen-lg: 1200px;
+
+@mixin respond-to($media)
+  @if $media == xs
+    @media only screen and (max-width: $screen-xs - 1) { @content }
+  @else if $media == sm
+    @media only screen and (min-width: $screen-xs) { @content }
+  @else if $media == md
+    @media only screen and (min-width: $screen-sm) { @content }
+  @else if $media == lg
+    @media only screen and (min-width: $screen-md) { @content }

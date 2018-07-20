@@ -10,6 +10,15 @@
       "problemMatcher": [
         "$node-sass"
       ]
+    },
+    {
+      "label": "watch",
+      "type": "shell",
+      "group": "build",
+      "isBackground": true,
+      "problemMatcher": [
+        "$node-sass"
+      ]
     }
   ]
 }
