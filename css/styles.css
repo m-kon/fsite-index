@@ -5,7 +5,7 @@ a, .links-list li {
   color: rgba(0, 0, 0, 0.7); }
 
 html, body, .container {
-  height: 100%; }
+  min-height: 100%; }
 
 body {
   font-family: var(--font-family-monospace);
