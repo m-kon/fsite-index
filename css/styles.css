@@ -1,7 +1,7 @@
 h1, h2, h3, h4, h5, h6, a:hover {
   color: black; }
 
-a, .links-list li {
+a, .links-list li, .person-card > .caption p {
   color: rgba(0, 0, 0, 0.7); }
 
 html, body, .container {
