@@ -67,7 +67,6 @@ vm = new Vue({
             axios.get('/api/projects')
                  .then(res => {
                     this.d = res.data.projects;
-                    console.log(this.d);
                  })
                  .catch(err => {
                     console.log(err);
