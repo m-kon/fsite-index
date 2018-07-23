@@ -71,8 +71,9 @@ a {
       .links-list > ul li .app-title {
         float: left; }
       .links-list > ul li .app-links {
-        float: right;
-        padding-left: .5rem; }
+        float: right; }
+        .links-list > ul li .app-links > a {
+          padding-left: .5rem; }
     .links-list > ul li::after {
       content: '....................................................................................................';
       display: block;
