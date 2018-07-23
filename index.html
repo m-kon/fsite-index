@@ -17,7 +17,8 @@
       integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
       crossorigin="anonymous">
     <!-- Custom styles -->
-    <link rel="stylesheet" href="css/styles.css">
+    <!-- <link rel="stylesheet" href="css/styles.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='fsite-index/css/styles.css') }}">
 
     <title>FSiTE index</title>
   </head>
@@ -39,6 +40,18 @@
         <h2>Приложения:</h2>
 
         <ul>
+          <li is="project-line"
+              v-for="project in projects"
+              :name="project.name">
+            <span slot="links"
+                  class="app-links">
+              <project-link v-for="line, i in project.links"
+                            :key="i"
+                            :line="line"></project-link>
+            </span>
+          </li>
+        </ul>
+        <!-- <ul>
           <li>
             <span class="app-title">
               FSiTE simple landing
@@ -65,9 +78,12 @@
                 </a>
               </span>
             </li>
-        </ul>
+        </ul> -->
       </div>
-
     </div>
+
+    <script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="{{ url_for('static', filename='fsite-index/js/main.js') }}"></script>
   </body>
 </html>
