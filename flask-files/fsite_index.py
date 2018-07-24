@@ -2,9 +2,8 @@
 """module create input data for fsite-index
 
 read folders names from ./dist
-all but not 'static' are projects names
-and contain 'links' file with lines like
-  <place-name> - <link-to place>
+all but not 'static' are projects names.
+search d.json files in folders
 """
 
 import os
