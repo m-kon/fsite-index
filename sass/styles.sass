@@ -1,3 +1,5 @@
+@import '../sass-imports/respond-to.sass'
+
 $color-bg-body: rgba(241, 248, 233, .5)
 $color-bg-section: rgba(255,255,255,.5)
 
@@ -9,6 +11,10 @@ $color-hover-bg: rgba(0,0,0,.05)
 $color-orange: rgb(253, 126, 20)
 $color-red: rgb(220, 53, 69)
 
+$main-transition: .2s
+
+$font-size-body: 1.2rem
+
 h1, h2, h3, h4, h5, h6, a:hover
   color: $color-text
 
@@ -19,14 +25,15 @@ html, body, .container
   min-height: 100%
 
 body
-  font-family: var(--font-family-monospace)
   background-color: $color-bg-body
+  font-family: var(--font-family-monospace)
+  font-size: $font-size-body
 
 a
-  transition: .2s
+  transition: $main-transition
 
   &:hover
-    font-size: 1.025rem
+    font-size: $font-size-body + .1rem
     text-decoration: none !important
 
 .section
@@ -38,10 +45,16 @@ a
   margin-right: auto
   margin-top: 1rem
   margin-bottom: 1rem
+  max-width: 960px
   box-shadow: 0 3px 13px 1px $color-shadow
-  transition: .25s
+  transition: $main-transition
+
   &:hover
     box-shadow: 0 6px 26px 0 $color-shadow
+
+  h2
+    margin-top: .25rem
+    margin-bottom: .5rem
 
 .person-card
   width: 250px
@@ -68,38 +81,60 @@ a
       margin-bottom: 0
 
 .links-list
-  max-width: 960px
+  display: flex
+  flex-direction: column
+  padding-left: 0
+  margin-bottom: .5rem
 
-  >ul
-    display: flex
-    flex-direction: column
-    list-style: none
-    padding-left: 0
-    margin-bottom: .5rem
-
-    li
-      line-height: 2
-      padding-left: 1rem
-      padding-right: 1rem
-      transition: .2s
-
-      &:hover
-        background-color: $color-hover-bg
-        border-left: 2px solid $color-orange
-        border-right: 2px solid $color-orange
-
-      .app-title
-        float: left
-      
-      .app-links
-        float: right
-        
-        >a
-          padding-left: .5rem
+  .project-line
+    line-height: 2
+    padding-left: 1rem
+    padding-right: 1rem
+    transition: $main-transition
+    @include respond-to(sm)
+      padding-left: 2rem
+      padding-right: 2rem
     
-    li::after
-      content: '....................................................................................................'
+    &:hover
+      background-color: $color-hover-bg
+      border-left: 2px solid $color-orange
+      border-right: 2px solid $color-orange
+      cursor: pointer
+
+    &::after
+      display: none
+
+      @include respond-to(sm)
+        content: '....................................................................................................'
+        display: block
+        white-space: nowrap
+        overflow: hidden
+        padding-left: .5rem
+
+    .project-title
       display: block
-      white-space: nowrap
-      overflow: hidden
-      padding-left: .5rem
+      float: none
+
+      @include respond-to(sm)
+        display: inline
+        float: left      
+
+    .project-links
+      display: none
+      float: none
+
+      @include respond-to(sm)
+        display: inline
+        float: right
+      
+      >a
+        padding-left: .5rem
+  
+  .project-description
+    background-color: rgba(0, 0, 0, 0.05)
+    border-top: 1px solid rgba(0,0,0,.05)
+    border-bottom: 1px solid rgba(0,0,0,.05)
+    font-size: 1rem
+    padding: .5rem 2rem
+    text-align: left
+    transition: 0.2s

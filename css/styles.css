@@ -8,13 +8,14 @@ html, body, .container {
   min-height: 100%; }
 
 body {
+  background-color: rgba(241, 248, 233, 0.5);
   font-family: var(--font-family-monospace);
-  background-color: rgba(241, 248, 233, 0.5); }
+  font-size: 1.2rem; }
 
 a {
-  transition: .2s; }
+  transition: 0.2s; }
   a:hover {
-    font-size: 1.025rem;
+    font-size: 1.3rem;
     text-decoration: none !important; }
 
 .section {
@@ -26,10 +27,14 @@ a {
   margin-right: auto;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  max-width: 960px;
   box-shadow: 0 3px 13px 1px rgba(0, 0, 0, 0.2);
-  transition: .25s; }
+  transition: 0.2s; }
   .section:hover {
     box-shadow: 0 6px 26px 0 rgba(0, 0, 0, 0.2); }
+  .section h2 {
+    margin-top: .25rem;
+    margin-bottom: .5rem; }
 
 .person-card {
   width: 250px;
@@ -52,33 +57,56 @@ a {
       margin-bottom: 0; }
 
 .links-list {
-  max-width: 960px; }
-  .links-list > ul {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    padding-left: 0;
-    margin-bottom: .5rem; }
-    .links-list > ul li {
-      line-height: 2;
-      padding-left: 1rem;
-      padding-right: 1rem;
-      transition: .2s; }
-      .links-list > ul li:hover {
-        background-color: rgba(0, 0, 0, 0.05);
-        border-left: 2px solid #fd7e14;
-        border-right: 2px solid #fd7e14; }
-      .links-list > ul li .app-title {
-        float: left; }
-      .links-list > ul li .app-links {
-        float: right; }
-        .links-list > ul li .app-links > a {
-          padding-left: .5rem; }
-    .links-list > ul li::after {
-      content: '....................................................................................................';
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: .5rem; }
+  .links-list .project-line {
+    line-height: 2;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    transition: 0.2s; }
+    @media only screen and (min-width: 576px) {
+      .links-list .project-line {
+        padding-left: 2rem;
+        padding-right: 2rem; } }
+    .links-list .project-line:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+      border-left: 2px solid #fd7e14;
+      border-right: 2px solid #fd7e14;
+      cursor: pointer; }
+    .links-list .project-line::after {
+      display: none; }
+      @media only screen and (min-width: 576px) {
+        .links-list .project-line::after {
+          content: '....................................................................................................';
+          display: block;
+          white-space: nowrap;
+          overflow: hidden;
+          padding-left: .5rem; } }
+    .links-list .project-line .project-title {
       display: block;
-      white-space: nowrap;
-      overflow: hidden;
-      padding-left: .5rem; }
+      float: none; }
+      @media only screen and (min-width: 576px) {
+        .links-list .project-line .project-title {
+          display: inline;
+          float: left; } }
+    .links-list .project-line .project-links {
+      display: none;
+      float: none; }
+      @media only screen and (min-width: 576px) {
+        .links-list .project-line .project-links {
+          display: inline;
+          float: right; } }
+      .links-list .project-line .project-links > a {
+        padding-left: .5rem; }
+  .links-list .project-description {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    font-size: 1rem;
+    padding: .5rem 2rem;
+    text-align: left;
+    transition: 0.2s; }
 
 /*# sourceMappingURL=styles.css.map */
